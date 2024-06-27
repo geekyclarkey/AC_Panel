@@ -1,1 +1,21 @@
-this is a file
+
+external_components:
+  - source: github://lanwin/esphome_samsung_ac@stable # use @main if you want the latest development (possibly unstable?)
+    components: [samsung_ac]
+
+samsung_ac:
+  devices:
+    - address: "20.00.00" # Indoor device address
+      climate:
+        name: "Master"
+        id: master
+      room_temperature:
+        name: "Master Temperature"
+      target_temperature:
+        name: "Master Target Temperature"
+      power:
+        name: "Master Power"
+      mode:
+        name: "Master Mode"
+      room_humidity:
+        name: "Master Humidity"
