@@ -1,0 +1,17 @@
+
+external_components:
+  - source: github://geoffdavis/esphome-mitsubishiheatpump
+
+  - platform: mitsubishi_heatpump
+    name: master
+    id: master
+    hardware_uart: UART1
+    baud_rate: 9600 #or 4800
+    supports:
+      mode: [COOL, HEAT, HEAT_COOL, DRY]
+      fan_mode: [AUTO, LOW, MEDIUM, HIGH]
+      swing_mode: ["OFF"]
+    visual:
+      min_temperature: $min_temperature
+      max_temperature: $max_temperature
+      temperature_step: $temperature_step
