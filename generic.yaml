@@ -1,0 +1,10 @@
+
+climate:
+  - platform: zhlt01
+    name: master
+    id: master
+    sensor: zone1_temp
+    visual:
+      min_temperature: $min_temperature
+      max_temperature: $max_temperature
+      temperature_step: $temperature_step
