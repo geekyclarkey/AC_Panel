@@ -1,0 +1,30 @@
+
+packages:
+  remote_package:
+    url: https://github.com/FujiHeatPump/esphome-fujitsu/tree/master/src
+    ref: main
+    files:
+      - FujitsuClimate.h
+      - FujitsuClimate.cpp
+      - FujiHeatPump.h
+      - FujiHeatPump.cpp
+    refresh: 300s
+
+
+esphome:
+  includes:
+    - FujitsuClimate.h
+    - FujitsuClimate.cpp
+    - FujiHeatPump.h
+    - FujiHeatPump.cpp
+
+climate:
+- platform: custom
+  lambda: |-
+    auto fujitsuClimate = new fujitsu::FujitsuClimate();
+    App.register_component(fujitsuClimate);
+    return {fujitsuClimate};
+
+  climates:
+    - name: "Master"
+      id: master
