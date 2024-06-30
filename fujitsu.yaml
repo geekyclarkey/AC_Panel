@@ -1,10 +1,10 @@
 
-esphome:
-  includes:
-    - FujitsuClimate.h
-    - FujitsuClimate.cpp
-    - FujiHeatPump.h
-    - FujiHeatPump.cpp
+# esphome:
+#   includes:
+#     - FujitsuClimate.h
+#     - FujitsuClimate.cpp
+#     - FujiHeatPump.h
+#     - FujiHeatPump.cpp
 
 packages:
   remote_package:
