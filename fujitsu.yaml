@@ -1,21 +1,13 @@
 
-# esphome:
-#   includes:
-#     - FujitsuClimate.h
-#     - FujitsuClimate.cpp
-#     - FujiHeatPump.h
-#     - FujiHeatPump.cpp
+external_components:
+  - source: https://github.com/FujiHeatPump/esphome-fujitsu/tree/master/src
 
-packages:
-  remote_package:
-    url: https://github.com/FujiHeatPump/esphome-fujitsu/tree/master/src
-    ref: main
-    files:
-      - FujitsuClimate.h
-      - FujitsuClimate.cpp
-      - FujiHeatPump.h
-      - FujiHeatPump.cpp
-    refresh: 300s
+esphome:
+  includes:
+    - FujitsuClimate.h
+    - FujitsuClimate.cpp
+    - FujiHeatPump.h
+    - FujiHeatPump.cpp
 
 climate:
   - platform: custom
