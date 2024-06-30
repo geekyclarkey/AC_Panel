@@ -1,6 +1,6 @@
 
 external_components:
-  - source: https://github.com/FujiHeatPump/esphome-fujitsu/tree/master/src
+  - source: github.com/FujiHeatPump/esphome-fujitsu/tree/master/src
 
 esphome:
   includes:
